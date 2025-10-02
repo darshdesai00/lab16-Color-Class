@@ -1,6 +1,7 @@
 // finished default constructor part
 // finished adding all of the full parameter constructor : (r,g,b)
 // finished adding the partial constructor (just red, defaults others to 0)
+// this is the final version showing all constructors together
 
 #include <iostream>
 #include <iomanip>
@@ -43,7 +44,7 @@ public:
 }; // important dont forget this one!!!
 
 int main() {
-    cout << "Using default, full, and partial constructors:\n\n";
+    cout << "Demonstrating all Color constructors:\n\n";
 
     // this object using default constructor
     Color c1;  
@@ -63,7 +64,7 @@ int main() {
     c4.print();
     cout << endl;
 
-    // here is the object using partial constructor
+    // this object using partial constructor
     Color c5(128);         // medium red, green/blue = 0
     c5.print();
     cout << endl;
