@@ -1,6 +1,4 @@
-// COMSC-210 
-// Lab 16: Color Class with Default Constructor
-// Darsh Desai
+// finished defualt constructor part
 
 #include <iostream>
 #include <iomanip>
@@ -11,7 +9,9 @@ const int W15 = 15;
 class Color {
 private:
     int red;
+
     int green;
+
     int blue;
 public:
     // default constructor
@@ -31,3 +31,17 @@ public:
     void print() {
         cout << setw(W15) << "Red: "   << red   << endl;
         cout << setw(W15) << "Green: " << green << endl;
+        cout << setw(W15) << "Blue: "  << blue  << endl;
+    }
+}; // important dont forget thus one!!!
+
+int main() {
+    cout << "Using default constructor:\n\n";
+
+    // first object created using default constructor
+    Color c1;  
+    c1.print();
+
+    return 0;
+}
+
