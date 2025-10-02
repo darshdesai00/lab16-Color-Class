@@ -1,11 +1,13 @@
 // finished default constructor part
 // finished adding all of the full parameter constructor : (r,g,b)
+// finished adding the partial constructor (just red, defaults others to 0)
 
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
 const int W15 = 15;
+
 
 class Color {
 private:
@@ -18,6 +20,9 @@ public:
 
     // full parameter constructor
     Color(int r, int g, int b) { red = r; green = g; blue = b; }
+
+    // partial constructor (only red provided, green & blue default to 0)
+    Color(int r) { red = r; green = 0; blue = 0; }
 
     // setters
     void setRed(int r)   { red = r; }
@@ -38,7 +43,7 @@ public:
 }; // important dont forget this one!!!
 
 int main() {
-    cout << "Using default and full parameter constructors:\n\n";
+    cout << "Using default, full, and partial constructors:\n\n";
 
     // this object using default constructor
     Color c1;  
@@ -56,6 +61,11 @@ int main() {
 
     Color c4(0, 0, 255);   // pure blue
     c4.print();
+    cout << endl;
+
+    // here is the object using partial constructor
+    Color c5(128);         // medium red, green/blue = 0
+    c5.print();
     cout << endl;
 
     return 0;
